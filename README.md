@@ -2,7 +2,6 @@
 
 Add ChatGPT to any <form> field with a few lines of code.
 
-
 ## Usage Examples
 
 With React:
@@ -11,14 +10,16 @@ With React:
 import { lfaiCreatePopup } from 'leftfieldai';
 
 function MyForm() {
-    // ...
+  // ...
 
-    return (
-        <form>
-            <input id="title" type="text" />
-            <a onClick={() => lfaiCreatePopup({ elementId: 'title', pubKey: 'lfai_xxxx' })}>Use AI for title suggestions</a>
-        </form>
-    );
+  return (
+    <form>
+      <input id="title" type="text" />
+      <a onClick={() => lfaiCreatePopup({ elementId: 'title', pubKey: 'lfai_xxxx' })}>
+        Use AI for title suggestions
+      </a>
+    </form>
+  );
 }
 ```
 
@@ -31,14 +32,16 @@ With Other JavaScript:
 // Javascript to add:
 import { lfaiCreatePopup } from 'leftfieldai';
 
-document.getElementById('titleAILink').addEventListener('click', () => lfaiCreatePopup({ elementId: 'title', pubKey: 'lfai_xxxx' }));
+document
+  .getElementById('titleAILink')
+  .addEventListener('click', () => lfaiCreatePopup({ elementId: 'title', pubKey: 'lfai_xxxx' }));
 ```
 
 ## All Options
 
 The package exports a type that has all the available options:
 
-```
+```typescript
 export type TLeftFieldPopupOptions = {
   pubKey: string; // Public key from your LeftFieldAI account
   elementId: string; // ID of the input field you want to fill in with the ChatGPT response
