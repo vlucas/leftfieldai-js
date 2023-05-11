@@ -1,0 +1,26 @@
+{
+  "name": "leftfieldai",
+  "version": "1.0.0",
+  "description": "Add ChatGPT to any <form> field with a few lines of code",
+  "homepage": "https://www.leftfieldai.com",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "prepack": "npm run clean && npm run build"
+  },
+  "keywords": ["AI", "ChatGPT", "chatgpt wrapper", "left field", "leftfield"],
+  "author": "Vance Lucas <vance@vancelucas.com>",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "mitt": "^3.0.0"
+  }
+}
